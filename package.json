@@ -1,0 +1,26 @@
+{
+  "name": "node-express-ts-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate to a NodeJS Rest API using Express and TypeScript... and some other things",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "express",
+    "typescript",
+    "rest",
+    "api"
+  ],
+  "author": "Priscilla Lopes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
