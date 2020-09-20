@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
-const router = Router();
+const defaultRouter = Router();
 
-router.get('/health', (_req, res) => {
+defaultRouter.get('/health', (_req, res) => {
   res
     .status(200)
     .json({ uptime: process.uptime(), message: 'OK', timestamp: Date.now() });
 });
 
-export default router;
+export default defaultRouter;

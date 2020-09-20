@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 import defaultRouter from './routes/default.router';
+import swaggerRouter from './routes/swagger.router';
 
 const server = express();
 
@@ -13,6 +14,7 @@ server.use(
 );
 
 server.use(defaultRouter);
+server.use(swaggerRouter);
 
 server.listen(8080, () => {
   console.log('Server listening at 8080...');
