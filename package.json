@@ -3,13 +3,6 @@
   "version": "1.0.0",
   "description": "A boilerplate to a NodeJS Rest API using Express and TypeScript... and some other things",
   "main": "server.ts",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "dev": "nodemon src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"{src,tests}/**/*.ts\" --fix"
-  },
   "keywords": [
     "node",
     "nodejs",
@@ -20,10 +13,25 @@
   ],
   "author": "Priscilla Lopes",
   "license": "UNLICENSED",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "test": "echo \"Error: no test specified yet\" && exit 1",
+    "lint": "eslint \"{src,tests}/**/*.ts\" --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn test"
+    }
+  },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
+    "remove": "^0.1.5",
     "swagger-ui-express": "^4.1.4"
   },
   "devDependencies": {
@@ -31,11 +39,14 @@
     "@types/express-validator": "^3.0.0",
     "@types/node": "^14.6.3",
     "@types/swagger-ui-express": "^4.1.2",
-    "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
     "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.2",
     "ts-node": "^9.0.0",
