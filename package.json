@@ -2,11 +2,11 @@
   "name": "node-express-ts-boilerplate",
   "version": "1.0.0",
   "description": "A boilerplate to a NodeJS Rest API using Express and TypeScript... and some other things",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
     "build": "tsc",
-    "start": "node ./src/index.ts",
-    "dev": "nodemon src/index.ts",
+    "start": "node ./src/server.ts",
+    "dev": "nodemon src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -18,7 +18,7 @@
     "api"
   ],
   "author": "Priscilla Lopes",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "dependencies": {
     "express": "^4.17.1"
   },
