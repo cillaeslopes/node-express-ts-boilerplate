@@ -16,6 +16,10 @@ server.use(
 server.use(defaultRouter);
 server.use(swaggerRouter);
 
-server.listen(8080, () => {
-  console.log('Server listening at 8080...');
-});
+if (process.env.NODE_ENV !== 'test') {
+  server.listen(8080, () => {
+    console.log('Server listening at 8080...');
+  });
+}
+
+export default server;
