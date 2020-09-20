@@ -4,7 +4,7 @@ import SwaggerDocument from '../swagger/swagger';
 
 const swaggerOptions = {
   customCss: '.swagger-ui table tbody tr td:first-of-type { min-width: 12em; }',
-  customSiteTitle: 'Natura App BFF',
+  customSiteTitle: 'Boilerplate: Docs',
 };
 
 const swaggerRouter = Router();
